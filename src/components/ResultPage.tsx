@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Container, Box } from "@material-ui/core";
 import { fetchData, useDispatch, useReducerState } from "../state";
 import { Link as RouterLink } from "react-router-dom";
+import { maxQuestionCount } from "../state/Context";
 
 const ResultPage: React.FC = () => {
   const { correctAnswers, questions } = useReducerState();
@@ -24,8 +25,8 @@ const ResultPage: React.FC = () => {
     <Container maxWidth="md">
       <Box boxShadow={2} padding={2} marginTop={4} className="mainBox">
       <h2>📊 Results</h2>
-      <p>You scored <b>{result} of {questions.length}</b> ({result/questions.length*100}%) correct answers</p>
-      <Box padding={3} className="reward">{getRewardText(result, questions.length)}</Box>
+      <p>You scored <b>{result} of {maxQuestionCount}</b> ({result/maxQuestionCount*100}%) correct answers</p>
+      <Box padding={3} className="reward">{getRewardText(result, maxQuestionCount)}</Box>
       <Box marginTop={4}>
       <RouterLink to="">
         <Button variant="contained">Try again</Button>
