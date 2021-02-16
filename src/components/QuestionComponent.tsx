@@ -23,10 +23,11 @@ const QuestionComponent = ({index, question, showResult, answerCorrect, checkRes
 
   return (
     <Container maxWidth="md">
-      <Box boxShadow={2} padding={2} marginTop={4}>
-      <h3>💬 Aussage {index + 1}</h3>
-      <h1>"{question.question}"</h1>
-      <hr/>
+      <Box boxShadow={2} padding={2} marginTop={4} className="mainBox">
+      <h2>💬 Aussage {index + 1}</h2>
+      <Box className="aussage">
+        <p>"{question.question}"</p>
+      </Box>
       <h3>{question.topic}</h3>
         <RadioGroup>
           <span>
@@ -36,7 +37,7 @@ const QuestionComponent = ({index, question, showResult, answerCorrect, checkRes
         </RadioGroup>
         {showResult && (
         <Box marginBottom={5}>
-          <h5>{answerCorrect ? "Deine Antwort ist richtig" : "Deine Antwort ist leider falsch"}</h5>
+          <h4>{answerCorrect ? "🎉 Prima, so sehen wir das auch" : "🚨 Sorry, wir sehen das anders"}</h4>
           <hr/>
           <h4>💡 Erklärung</h4>
           <p>{question.explanation}</p>
