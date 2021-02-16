@@ -4,7 +4,7 @@ import { Link as RouterLink } from "react-router-dom";
 
 const LandingPage: React.FC = () => (
   <Container maxWidth="md">
-    <Box boxShadow={2} padding={2} marginTop={4}>
+    <Box boxShadow={2} padding={3} marginTop={4} className="mainBox">
       <h1>📣 Language is a powerful tool</h1>
       <Box color="text.primary" marginBottom={4}>
         <h4>Rules</h4>
@@ -23,7 +23,7 @@ const LandingPage: React.FC = () => (
         </RouterLink>
       </Box>
 
-      <Box marginTop={5}>
+      <Box marginTop={4} className="disclaimer">
       <h4>Disclaimer</h4>
       <p>This quiz was created during a Novatec hackathon. The questions, answers and explanations were created based on our best knowledge 
         and thorougly discussed. If you have questions or see something obviously wrong please contact the initiator <i>Stefan Schultz</i> or 
