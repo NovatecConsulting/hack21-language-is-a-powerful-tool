@@ -39,7 +39,7 @@ export const getQuestionsStraight = (): Question[] => [
   {
     topic : "Würdest du das so sagen?",
     level : "easy",
-    question : "Frauen und Männer sind in unserer Gesellschaft gleichberechtigt und werden dementsprechend auch gleich behandelt.",
+    question : "Frauen und Männer sind in unserer Gesellschaft gleichberechtigt und werden dementsprechend auch schon gleich behandelt.",
     answer : "no",
     explanation : "Es mag vielleicht manchmal den Anschein erwecken, dass Frauen und Männer überall gleich behandelt werden. Leider gibt es noch viele Bereiche in denen Frauen benachteiligt sind. Dazu gehören z.B. die Vergütung oder Karrieremöglichkeiten (auch wenn vielleicht der eigene Arbeitgeber hier schon sehr gut aufgestellt ist). Aber auch tief sitzender Sexismus oder veraltete Rollenbilder führen zu einer Benachteiligung, die Auswirkungen auf das gesamte Leben der Betroffenen haben."
   },
