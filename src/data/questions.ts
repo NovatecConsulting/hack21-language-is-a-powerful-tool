@@ -20,7 +20,7 @@ export const getQuestionsStraight = (): Question[] => [
     level : "medium",
     question : "... aber Männer werden doch auch oft diskriminiert",
     answer : "no",
-    explanation : "Diese Aussage folgt meist einer Problematik die z.B. Frauen betrifft (z.B. \"wir brauchen eine Frauenquote\") man relativiert dadurch aber das eigentliche Problem bzw. versucht vom eigentlichen Problem abzulenken.\n\nDAX notierte Unternehmen sind so groß, dass es quasi unmöglich ist, dass es keine qualifizierten Frauen gibt, die eine Führungsrolle im Vorstand übernehmen können (und das ist meist die Ausrede der Unternehmen warum es kaum Frauen im Vorstand/Management gibt) Mit der Quote kann man diese Unternehmen in die Pflicht nehmen, genauer hinzusehen. Sei es durch Ausbildungsprogramme (Female-Executive-Programs) oder ähnliches."
+    explanation : "Diese Aussage folgt oft so oder ähnlich einer Aussage die Frauen betrifft (wie z.B. der Notwendigkeit einer Frauenquote), man relativiert dadurch aber das eigentliche Problem bzw. versucht vom eigentlichen Problem abzulenken. Eine Frauenquote ist nicht da um Männer zu diskriminieren, sondern zielt auf ein andere Problematik ab: DAX notierte Unternehmen sind so groß, dass es quasi unmöglich ist, dass es keine qualifizierten Frauen gibt die eine Führungsrolle im Vorstand übernehmen können (und das ist meist die Ausrede der Unternehmen warum es kaum Frauen im Vorstand/Management gibt) Mit der Quote kann man diese Unternehmen in die Pflicht nehmen, genauer hinzusehen. Sei es durch Ausbildungsprogramme (Female-Executive-Programs) oder ähnliches."
   },
   {
     topic : "Würdest du das so sagen?",
