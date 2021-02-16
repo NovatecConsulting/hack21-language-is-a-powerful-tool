@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Button, Container } from "@material-ui/core";
 import { Link as RouterLink } from "react-router-dom";
+import { maxQuestionCount } from "../state/Context";
 
 const LandingPage: React.FC = () => (
   <Container maxWidth="md">
@@ -8,7 +9,7 @@ const LandingPage: React.FC = () => (
       <h1>📣 Language is a powerful tool</h1>
       <Box color="text.primary" marginBottom={4}>
         <h4>Rules</h4>
-        We got some questions for you to find out if
+        We got <b>{maxQuestionCount} questions</b> for you to find out if
         you know how to talk to the human beings around you. Each question also
         comes with a brief explanation why something might be problematic to
         say, so hopefully you'll learn something new.
