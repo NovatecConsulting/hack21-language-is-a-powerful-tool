@@ -5,9 +5,10 @@ import { Link as RouterLink } from "react-router-dom";
 const LandingPage: React.FC = () => (
   <Container maxWidth="md">
     <Box boxShadow={2} padding={2} marginTop={4}>
-      <h1>💬 Would you say it?</h1>
+      <h1>📣 Language is a powerful tool</h1>
       <Box color="text.primary" marginBottom={4}>
-        The rules are easy: We got <u>10 questions</u> for you to find out if
+        <h4>Rules</h4>
+        We got some questions for you to find out if
         you know how to talk to the human beings around you. Each question also
         comes with a brief explanation why something might be problematic to
         say, so hopefully you'll learn something new.
@@ -20,6 +21,22 @@ const LandingPage: React.FC = () => (
         <RouterLink to="/quiz">
           <Button variant="contained">Start</Button>
         </RouterLink>
+      </Box>
+
+      <Box marginTop={5}>
+      <h4>Disclaimer</h4>
+      <p>This quiz was created during a Novatec hackathon. The questions, answers and explanations were created based on our best knowledge 
+        and thorougly discussed. If you have questions or see something obviously wrong please contact the initiator <i>Stefan Schultz</i> or 
+        join our internal slack channels <span id="slack">#cop-women</span>, <span id="slack">#cop-diversity</span> or 
+        <span id="slack">#cop-gendering</span> and ask or join the regular <span id="slack">Women@Novatec</span> meeting. If you don't feel comfortabel 
+        with that you can also talk to one of our trust persons:</p>
+        <ul>
+          <li>Zarin Kabir</li>
+          <li>Ruben Burr</li>
+          <li>Amra Avdic</li>
+          <li>Thorsten Jakoby</li>
+          <li>Dirk Maucher</li>
+        </ul>
       </Box>
     </Box>
   </Container>
