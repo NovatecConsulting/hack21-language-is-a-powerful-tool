@@ -55,11 +55,11 @@ const ResultPage: React.FC = () => {
       case resultLevel.BAD:
         return "😰 Whoopsie, maybe you take another shot?";
       case resultLevel.MEH:
-        return "😕 Good, but there is still room for improvement.";
+        return "😕 Good, but there is still room for improvement. Why don't you try again?";
       case resultLevel.GOOD:
         return "😍 Great work. Keep it up to get to 100%";
       case resultLevel.PERFECT:
-        return "🥳 Awesome! You obviously know your way around words.";
+        return "🥳 Awesome! You obviously know your way around words and have a deep understanding of feminism";
       default:
         return "";
     }
