@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  background-color:lavender;
+}
+
+div.MuiContainer-root .MuiBox-root {
+  background-color: white;
+}
+
+div.MuiBox-root h1 {
+  text-align: center;
+}
+
+span#slack {
+  font-weight: bold;
+  color: #525252;
+}
+
