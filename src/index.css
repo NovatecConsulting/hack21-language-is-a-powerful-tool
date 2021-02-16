@@ -21,16 +21,33 @@ html {
   background-color:lavender;
 }
 
-div.MuiContainer-root .MuiBox-root {
+div.mainBox {
   background-color: white;
 }
 
-div.MuiBox-root h1 {
+div.aussage p {
+  font-size: 20px;
+  font-weight: bold;
   text-align: center;
+  border: 1px solid #ababab;
+  background-color: #efefef;
+  padding: 20px 10px;
+  margin: 10px 0px;
 }
 
 span#slack {
   font-weight: bold;
   color: #525252;
+}
+
+div.reward {
+  border: 1px solid #ababab;
+  background-color: #FFFFE0;
+}
+
+div.disclaimer {
+  border: 1px solid #ababab;
+  background-color: #efefef;
+  padding: 3px 20px;
 }
 
