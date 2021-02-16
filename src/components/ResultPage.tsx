@@ -16,6 +16,12 @@ const ResultPage: React.FC = () => {
     PERFECT: "perfect"
   }
 
+  const margins = {
+    MEH: 0.25,
+    GOOD: 0.5,
+    PERFECT: 0.85
+  }
+
   React.useEffect(() => {
     fetchData(dispatch);
     setResult(correctAnswers);
@@ -38,11 +44,11 @@ const ResultPage: React.FC = () => {
 
   function getRewardLevel(correctCount: number, totalCount: number): String  {
     var result = correctCount/totalCount;
-    if(result < 0.25) {
+    if(result < margins.MEH) {
       return resultLevel.BAD;
-    } else if(result >= 0.25 && result < 0.5) {
+    } else if(result >= margins.MEH && result < margins.GOOD) {
       return resultLevel.MEH;
-    } else if(result >= 0.5 && result < 0.85) {
+    } else if(result >= margins.GOOD && result < margins.PERFECT) {
       return resultLevel.GOOD;
     } else {
       return resultLevel.PERFECT;
@@ -53,13 +59,13 @@ const ResultPage: React.FC = () => {
     var rewardLevel = getRewardLevel(correctCount, totalCount);
     switch(rewardLevel) {
       case resultLevel.BAD:
-        return "😰 Whoopsie. Maybe you take another shot?";
+        return "🚨 Whoopsie. Maybe you take another shot?";
       case resultLevel.MEH:
         return "😕 Good, but there is still room for improvement. Why don't you try again?";
       case resultLevel.GOOD:
         return "😍 Great work. Keep it up to get to 100%";
       case resultLevel.PERFECT:
-        return "🥳 Awesome! You obviously know your way around words and have a deep understanding of feminism";
+        return "🥳 Awesome! You obviously know your way around words and have a good understanding what feminism is about";
       default:
         return "🤖 Bleep bloop, something is wrong";
     }
