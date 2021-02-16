@@ -37,7 +37,7 @@ const QuestionComponent = ({index, question, showResult, answerCorrect, checkRes
         </RadioGroup>
         {showResult && (
         <Box marginBottom={5}>
-          <h4>{answerCorrect ? "🎉 Great, we see it this way as well" : "🚨 Sorry, you shouldn't say that"}</h4>
+          <h4>{answerCorrect ? "🎉 Great, we are on the same page" : "🚨 Sorry, you shouldn't say that"}</h4>
           <hr/>
           <h4>💡 Explanation</h4>
           <p>{question.explanation}</p>
