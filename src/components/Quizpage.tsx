@@ -4,6 +4,7 @@ import QuestionComponent from "./QuestionComponent";
 import { fetchData, useDispatch, useReducerState } from "../state";
 import { setCorrectAnswers } from "../state/Actions";
 import { Redirect } from "react-router-dom";
+import { maxQuestionCount } from "../state/Context";
  
 const QuizPage: React.FC = () => { 
   const dispatch = useDispatch();
@@ -35,7 +36,7 @@ const QuizPage: React.FC = () => {
 
   return (
     <Container>
-      {!!questions && questions.length > 0 && questionIndex < questions.length && (
+      {!!questions && questions.length > 0 && (questionIndex < questions.length ||  questionIndex < maxQuestionCount) && (
         <QuestionComponent 
           index={questionIndex} 
           question={questions[questionIndex]} 
@@ -45,7 +46,7 @@ const QuizPage: React.FC = () => {
           nextQuestion={nextQuestion}
         />
       )}
-      {!!questions && questions.length > 0 && questionIndex === questions.length && (
+      {!!questions && questions.length > 0 && (questionIndex === questions.length || questionIndex === maxQuestionCount) && (
         <Redirect to="/result"/>
       )}
     </Container>
