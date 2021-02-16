@@ -4,9 +4,16 @@ import { fetchData, useDispatch, useReducerState } from "../state";
 import { Link as RouterLink } from "react-router-dom";
 
 const ResultPage: React.FC = () => {
-  const { correctAnswers } = useReducerState();
+  const { correctAnswers, questions } = useReducerState();
   const [result, setResult] = useState(0);
   const dispatch = useDispatch();
+
+  const resultLevel = {
+    BAD: "bad",
+    MEH: "meh",
+    GOOD: "good",
+    PERFECT: "perfect"
+  }
 
   React.useEffect(() => {
     fetchData(dispatch);
@@ -14,16 +21,48 @@ const ResultPage: React.FC = () => {
   }, []);
 
    return (
-    <Container>
-      <Box boxShadow={2} padding={2} marginTop={4}>
-      <h1>Result</h1>
-      <p>Correct Answers: {result}</p>
-      <RouterLink to="/quiz">
+    <Container maxWidth="md">
+      <Box boxShadow={2} padding={2} marginTop={4} className="mainBox">
+      <h2>📊 Results</h2>
+      <p>You scored <b>{result} of {questions.length}</b> ({result/questions.length*100}%) correct answers</p>
+      <Box padding={3} className="reward">{getRewardText(result, questions.length)}</Box>
+      <Box marginTop={4}>
+      <RouterLink to="">
         <Button variant="contained">Try again</Button>
       </RouterLink>
       </Box>
+      </Box>
     </Container>
   );
+
+  function getReward(correctCount: number, totalCount: number): String  {
+    var result = correctCount/totalCount;
+    if(result < 0.25) {
+      return resultLevel.BAD;
+    } else if(result >= 0.25 && result < 0.5) {
+      return resultLevel.MEH;
+    } else if(result >= 0.5 && result < 0.85) {
+      return resultLevel.GOOD;
+    } else {
+      return resultLevel.PERFECT;
+    }
+  }
+
+  function getRewardText(correctCount: number, totalCount: number): String {
+    var rewardLevel = getReward(correctCount, totalCount);
+    switch(rewardLevel) {
+      case resultLevel.BAD:
+        return "😰 Whoopsie, maybe you take another shot?";
+      case resultLevel.MEH:
+        return "😕 Good, but there is still room for improvement.";
+      case resultLevel.GOOD:
+        return "😍 Great work. Keep it up to get to 100%";
+      case resultLevel.PERFECT:
+        return "🥳 Awesome! You obviously know your way around words.";
+      default:
+        return "";
+    }
+  }
 }
 
 export default ResultPage;
