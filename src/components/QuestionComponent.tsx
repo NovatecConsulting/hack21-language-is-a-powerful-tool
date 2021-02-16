@@ -24,22 +24,22 @@ const QuestionComponent = ({index, question, showResult, answerCorrect, checkRes
   return (
     <Container maxWidth="md">
       <Box boxShadow={2} padding={2} marginTop={4} className="mainBox">
-      <h2>💬 Aussage {index + 1}</h2>
+      <h2>💬 Statement {index + 1}</h2>
       <Box className="aussage">
         <p>"{question.question}"</p>
       </Box>
       <h3>{question.topic}</h3>
         <RadioGroup>
           <span>
-            <span><Radio value="yes" title="ja" onChange={handleChange} disabled={showResult}/>Ja</span>
-            <span><Radio value="no" title="nein" onChange={handleChange} disabled={showResult}/>Nein</span>
+            <span><Radio value="yes" title="ja" onChange={handleChange} disabled={showResult}/>Yes</span>
+            <span><Radio value="no" title="nein" onChange={handleChange} disabled={showResult}/>No</span>
           </span>
         </RadioGroup>
         {showResult && (
         <Box marginBottom={5}>
-          <h4>{answerCorrect ? "🎉 Prima, so sehen wir das auch" : "🚨 Sorry, wir sehen das anders"}</h4>
+          <h4>{answerCorrect ? "🎉 Great, we see it this way as well" : "🚨 Sorry, you shouldn't say that"}</h4>
           <hr/>
-          <h4>💡 Erklärung</h4>
+          <h4>💡 Explanation</h4>
           <p>{question.explanation}</p>
         </Box>
         )}
