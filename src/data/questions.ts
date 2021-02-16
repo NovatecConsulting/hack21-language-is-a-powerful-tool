@@ -25,7 +25,7 @@ export const getQuestionsStraight = (): Question[] => [
   {
     topic : "Würdest du das so sagen?",
     level : "easy",
-    question : "Frauen brauchen Ewigkeiten im Bad, reden zu viel, können nicht einparken, sind zu emotional usw.",
+    question : "Frauen brauchen ewig im Bad / Frauen reden zu viel / Frauen können nicht einparken / Frauen sind zu emotional usw.",
     answer : "no",
     explanation : "Zunächst handelt es sich bei solchen Aussagen um eine Generalisierung die auf schlechter Beobachtung beruht. Es mag ja sein, dass man eine Frau kennt die z.B. lange im Bad braucht. Es gibt aber durchaus auch Frauen die schnell sind. Des Weiteren arten solche Aussagen gerne auch in pauschales Frauenbashing aus, was nicht sehr nett ist. Du darfst kritisieren, aber bitte konkret und sachlich."
   },
