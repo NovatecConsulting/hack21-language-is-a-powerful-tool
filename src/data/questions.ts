@@ -17,10 +17,10 @@ export const getQuestionsStraight = (): Question[] => [
   },
   {
     topic : "Würdest du das so sagen?",
-    level : "easy",
-    question : "... aber Männer werden doch auch diskriminiert",
+    level : "medium",
+    question : "... aber Männer werden doch auch oft diskriminiert",
     answer : "no",
-    explanation : "Diese Aussage folgt meist einer Problematik die z.B. Frauen betrifft (z.B. \"wir brauchen eine Frauenquote\") man relativiert dadurch aber das eigentlich Problem bzw. versucht vom eigentlichen Problem abzulenken. DAX notierte Unternehmen sind so groß, dass es quasi unmöglich ist, dass es keine qualifizierten Frauen gibt, die eine Führungsrolle im Vorstand übernehmen können (und das ist meist die Ausrede der Unternehmen warum es kaum Frauen im Vorstand/Management gibt) Mit der Quote kann man diese Unternehmen in die Pflicht nehmen, genauer hinzusehen. Sei es durch Ausbildungsprogramme (Female-Executive-Programs) oder ähnliches."
+    explanation : "Diese Aussage folgt meist einer Problematik die z.B. Frauen betrifft (z.B. \"wir brauchen eine Frauenquote\") man relativiert dadurch aber das eigentliche Problem bzw. versucht vom eigentlichen Problem abzulenken.\n\nDAX notierte Unternehmen sind so groß, dass es quasi unmöglich ist, dass es keine qualifizierten Frauen gibt, die eine Führungsrolle im Vorstand übernehmen können (und das ist meist die Ausrede der Unternehmen warum es kaum Frauen im Vorstand/Management gibt) Mit der Quote kann man diese Unternehmen in die Pflicht nehmen, genauer hinzusehen. Sei es durch Ausbildungsprogramme (Female-Executive-Programs) oder ähnliches."
   },
   {
     topic : "Würdest du das so sagen?",
@@ -46,29 +46,26 @@ export const getQuestionsStraight = (): Question[] => [
   {
     topic : "Würdest du das so sagen?",
     level : "easy",
-    question : "(zu Kollegin nach ihrem Vortrag) Ich fand deinen Vortrag wirklich super",
+    question : "(zu Kollegin nach ihrer Präsentation) Ich fand deinen Vortrag wirklich super",
     answer : "yes",
     explanation : "Niemand hat etwas gegen ein Lob oder ein paar nette Worte, wenn es ehrlich gemeint ist. Egal ob es von einem Mann oder einer Frau kommt."
   },
   {
     topic : "Würdest du das so sagen?",
-    level : "easy",
+    level : "medium",
     question : "Sprache zu gendern ist ein wichtiger Schritt in Richtung der Gleichstellung von Mann und Frau",
     answer : "yes",
     explanation : "Die ständige Nutzung des generischen Maskulins zeichnet (wenn auch unterbewusst) ein gewisses Bild in unseren Köpfen. So wird z.B. \"der Arzt\" automatisch als Mann interpretiert, auch wenn damit eine Frau gemeint sein könnte. Um diese Ausgrenzung anderer Geschlechter zu vermeiden, sollte man auf alternative, inkludierende Ausdrucksweisen ausweichen."
   }
 ]
 
-export const getQuestions = (): Question[] => shuffleArray(getQuestionsStraight());
+export const getQuestions = (): Question[] => shuffleArray(shuffleArray(getQuestionsStraight()));
 
 function shuffleArray(array: Question[]) {
   let curId = array.length;
-  // There remain elements to shuffle
   while (0 !== curId) {
-    // Pick a remaining element
     let randId = Math.floor(Math.random() * curId);
     curId -= 1;
-    // Swap it with the current element.
     let tmp = array[curId];
     array[curId] = array[randId];
     array[randId] = tmp;
