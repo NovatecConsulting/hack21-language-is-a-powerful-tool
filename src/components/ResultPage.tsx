@@ -36,7 +36,7 @@ const ResultPage: React.FC = () => {
     </Container>
   );
 
-  function getReward(correctCount: number, totalCount: number): String  {
+  function getRewardLevel(correctCount: number, totalCount: number): String  {
     var result = correctCount/totalCount;
     if(result < 0.25) {
       return resultLevel.BAD;
@@ -50,10 +50,10 @@ const ResultPage: React.FC = () => {
   }
 
   function getRewardText(correctCount: number, totalCount: number): String {
-    var rewardLevel = getReward(correctCount, totalCount);
+    var rewardLevel = getRewardLevel(correctCount, totalCount);
     switch(rewardLevel) {
       case resultLevel.BAD:
-        return "😰 Whoopsie, maybe you take another shot?";
+        return "😰 Whoopsie. Maybe you take another shot?";
       case resultLevel.MEH:
         return "😕 Good, but there is still room for improvement. Why don't you try again?";
       case resultLevel.GOOD:
@@ -61,7 +61,7 @@ const ResultPage: React.FC = () => {
       case resultLevel.PERFECT:
         return "🥳 Awesome! You obviously know your way around words and have a deep understanding of feminism";
       default:
-        return "";
+        return "🤖 Bleep bloop, something is wrong";
     }
   }
 }
