@@ -11,3 +11,5 @@ export const StateContext = React.createContext<State>({
     correctAnswers: 0
 });
 export const useReducerState = () => React.useContext(StateContext);
+
+export const maxQuestionCount = 5;
