@@ -21,7 +21,7 @@ const LandingPage: React.FC = () => (
 
       <Box className="button startButton">
         <RouterLink to="/quiz">
-          <Button variant="contained" color="primary" disableElevation>Start</Button>
+          <Button variant="contained" color="primary" disableElevation size="large">Start</Button>
         </RouterLink>
       </Box>
 
