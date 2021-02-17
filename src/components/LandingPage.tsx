@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Button, Container } from "@material-ui/core";
 import { Link as RouterLink } from "react-router-dom";
 import { maxQuestionCount } from "../state/Context";
+import logo from "../nt-logo.png"
 
 const LandingPage: React.FC = () => (
   <Container maxWidth="md">
@@ -18,7 +19,7 @@ const LandingPage: React.FC = () => (
         But most of all: Have fun and be nice to people 🧡
       </Box>
 
-      <Box>
+      <Box className="startButton">
         <RouterLink to="/quiz">
           <Button variant="contained">Start</Button>
         </RouterLink>
@@ -39,6 +40,7 @@ const LandingPage: React.FC = () => (
           <li>Dirk Maucher</li>
         </ul>
       </Box>
+      <Box className="powered"><img src={logo} className="powered" /></Box>
     </Box>
   </Container>
 );
