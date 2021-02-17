@@ -75,3 +75,10 @@ div.button a {
   text-decoration: none;
 }
 
+fieldset.answer-section {
+  margin-top: 15px;
+}
+fieldset.answer-section legend{
+  font-weight: bold;
+  color: black;
+}

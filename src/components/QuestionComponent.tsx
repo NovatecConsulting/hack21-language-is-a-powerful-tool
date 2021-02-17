@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Box, Container, Radio, RadioGroup } from "@material-ui/core";
+import { Button, Box, Container, Radio, RadioGroup, FormControl, FormLabel, FormControlLabel } from "@material-ui/core";
 import { Question } from "../types/Question";
 
 interface Props {
@@ -28,26 +28,26 @@ const QuestionComponent = ({index, question, showResult, answerCorrect, checkRes
       <Box className="aussage">
         <p>"{question.question}"</p>
       </Box>
-      <h3>{question.topic}</h3>
-        <RadioGroup>
-          <span>
-            <span><Radio value="yes" title="ja" onChange={handleChange} disabled={showResult}/>Yes</span>
-            <span><Radio value="no" title="nein" onChange={handleChange} disabled={showResult}/>No</span>
-          </span>
+      <FormControl component="fieldset" className="answer-section">
+        <FormLabel component="legend">{question.topic}</FormLabel>
+        <RadioGroup aria-label="answers" name="answers" onChange={handleChange} row>
+          <FormControlLabel value="ja" control={<Radio color="primary"/>} label="Yes" disabled={showResult}/>
+          <FormControlLabel value="nein" control={<Radio color="primary"/>} label="No" disabled={showResult}/>
         </RadioGroup>
-        {showResult && (
-        <Box marginBottom={5}>
-          <h4>{answerCorrect ? "🎉 Great, we are on the same page" : "🚨 Sorry, you shouldn't say that"}</h4>
-          <hr/>
-          <h4>💡 Explanation</h4>
-          <p>{question.explanation}</p>
-        </Box>
-        )}
-        {!showResult ?
-          <Box className="button"><Button variant="contained" color="primary" disableElevation onClick={handleCheckResult}>Check Result</Button></Box>
+      </FormControl>
+      {showResult && (
+      <Box marginBottom={5}>
+        <h4>{answerCorrect ? "🎉 Great, we are on the same page" : "🚨 Sorry, you shouldn't say that"}</h4>
+        <hr/>
+        <h4>💡 Explanation</h4>
+        <p>{question.explanation}</p>
+      </Box>
+      )}
+      {!showResult ?
+        <Box className="button"><Button variant="contained" color="primary" disableElevation onClick={handleCheckResult}>Check Result</Button></Box>
         :
         <Box className="button"><Button variant="contained" color="primary" disableElevation onClick={nextQuestion}>Next Question</Button></Box>
-        }
+      }
       </Box>
     </Container>
   );
