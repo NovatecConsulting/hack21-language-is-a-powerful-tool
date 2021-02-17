@@ -26,15 +26,16 @@ div.mainBox {
 }
 
 div.aussage p {
-  color: #122a70;
+  color: #2962a3;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  border: 1px solid #1f43b1;
-  background-color: #abc1ff;
+}
+
+div.aussage {
+  border: 1px solid #2962a3;
+  background-color: #d0e4ff;
   border-radius: 4px;
-  padding: 20px 10px;
-  margin: 10px 0px;
 }
 
 span#slack {
@@ -45,7 +46,11 @@ span#slack {
 div.disclaimer {
   border: 1px solid #ababab;
   background-color: #efefef;
-  padding: 3px 20px;
+  border-radius: 4px;
+}
+
+div.disclaimer h4 {
+  margin: 0px 0px;
 }
 
 img.powered {
