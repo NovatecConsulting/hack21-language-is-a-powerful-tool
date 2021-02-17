@@ -31,8 +31,8 @@ const QuestionComponent = ({index, question, showResult, answerCorrect, checkRes
       <FormControl component="fieldset" className="answer-section">
         <FormLabel component="legend">{question.topic}</FormLabel>
         <RadioGroup aria-label="answers" name="answers" onChange={handleChange} row>
-          <FormControlLabel value="ja" control={<Radio color="primary"/>} label="Yes" disabled={showResult}/>
-          <FormControlLabel value="nein" control={<Radio color="primary"/>} label="No" disabled={showResult}/>
+          <FormControlLabel value="yes" control={<Radio color="primary"/>} label="Yes" disabled={showResult}/>
+          <FormControlLabel value="no" control={<Radio color="primary"/>} label="No" disabled={showResult}/>
         </RadioGroup>
       </FormControl>
       {showResult && (
