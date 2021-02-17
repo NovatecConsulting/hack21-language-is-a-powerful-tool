@@ -33,9 +33,9 @@ const ResultPage: React.FC = () => {
       <h2>📊 Results</h2>
       <p>You scored <b>{result} of {maxQuestionCount}</b> ({result/maxQuestionCount*100}%) correct answers</p>
       <Box padding={3} className="reward">{getRewardText(result, maxQuestionCount)}</Box>
-      <Box marginTop={4}>
+      <Box marginTop={4} className="button">
       <RouterLink to="">
-        <Button variant="contained">Try again</Button>
+        <Button variant="contained" color="primary" disableElevation >Try again</Button>
       </RouterLink>
       </Box>
       </Box>
