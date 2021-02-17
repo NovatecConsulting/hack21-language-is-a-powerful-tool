@@ -85,13 +85,13 @@ fieldset.answer-section legend{
 }
 
 div.same {
-  background-color: #c5ffae;
+  background-color: #e1ffd5;
   border: 1px solid #628354;
   border-radius: 4px;
 }
 
 div.different {
-  background-color: #ffaeae;
-  border: 1px solid #835454;
+  background-color: #ffdfdf;
+  border: 1px solid #8a1515;
   border-radius: 4px;
 }
