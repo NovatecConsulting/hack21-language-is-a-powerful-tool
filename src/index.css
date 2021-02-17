@@ -67,7 +67,11 @@ div.startButton {
   margin: auto;
 }
 
-div.startButton button {
+div.button startButton {
   width: 100px;
+}
+
+div.button a {
+  text-decoration: none;
 }
 
