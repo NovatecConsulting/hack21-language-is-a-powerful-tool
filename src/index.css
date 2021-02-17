@@ -26,11 +26,13 @@ div.mainBox {
 }
 
 div.aussage p {
+  color: #122a70;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  border: 1px solid #ababab;
-  background-color: #efefef;
+  border: 1px solid #1f43b1;
+  background-color: #abc1ff;
+  border-radius: 4px;
   padding: 20px 10px;
   margin: 10px 0px;
 }
@@ -94,4 +96,9 @@ div.different {
   background-color: #ffdfdf;
   border: 1px solid #8a1515;
   border-radius: 4px;
+}
+
+div.explanation {
+  text-align: justify;
+  line-height: 120%;
 }

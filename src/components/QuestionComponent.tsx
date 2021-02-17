@@ -23,7 +23,7 @@ const QuestionComponent = ({index, question, showResult, answerCorrect, checkRes
 
   return (
     <Container maxWidth="md">
-      <Box boxShadow={2} padding={2} marginTop={4} className="mainBox">
+      <Box boxShadow={2} padding={3} marginTop={4} className="mainBox">
       <h2>💬 Statement {index + 1}</h2>
       <Box className="aussage">
         <p>"{question.question}"</p>
@@ -38,8 +38,10 @@ const QuestionComponent = ({index, question, showResult, answerCorrect, checkRes
       {showResult && (
       <Box marginBottom={5}>
         <Box padding={2} className={answerCorrect ? "same" : "different"}>{answerCorrect ? "🎉 Great, we are on the same page" : "🚨 Sorry, we see have a different interpretation"}</Box>
-        <h4>💡 Explanation</h4>
-        <p>{question.explanation}</p>
+        <Box className="explanation">
+          <h4>💡 Explanation</h4>
+          <p>{question.explanation}</p>
+        </Box>
       </Box>
       )}
       {!showResult ?
