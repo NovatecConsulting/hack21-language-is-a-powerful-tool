@@ -42,11 +42,6 @@ span#slack {
   color: #525252;
 }
 
-div.reward {
-  border: 1px solid #ababab;
-  background-color: #FFFFE0;
-}
-
 div.disclaimer {
   border: 1px solid #ababab;
   background-color: #efefef;
@@ -86,7 +81,7 @@ fieldset.answer-section legend{
   color: black;
 }
 
-div.same {
+div.good, div.perfect {
   color: #628354;
   font-weight: bold;
   background-color: #e1ffd5;
@@ -94,7 +89,15 @@ div.same {
   border-radius: 4px;
 }
 
-div.different {
+div.meh {
+  color: #808044;
+  font-weight: bold;
+  background-color: #FFFFE0;
+  border: 1px solid #808044;
+  border-radius: 4px;
+}
+
+div.alarm, div.bad {
   color: #8a1515;
   font-weight: bold;
   background-color: #ffdfdf;

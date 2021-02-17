@@ -32,7 +32,7 @@ const ResultPage: React.FC = () => {
       <Box boxShadow={2} padding={2} marginTop={4} className="mainBox">
       <h2>📊 Results</h2>
       <p>You scored <b>{result} of {maxQuestionCount}</b> ({result/maxQuestionCount*100}%) correct answers</p>
-      <Box padding={3} className="reward">{getRewardText(result, maxQuestionCount)}</Box>
+      <Box padding={2} className={getRewardLevel(result, maxQuestionCount)}>{getRewardText(result, maxQuestionCount)}</Box>
       <Box marginTop={4} className="button">
       <RouterLink to="">
         <Button variant="contained" color="primary" disableElevation >Restart Quiz</Button>
@@ -42,7 +42,7 @@ const ResultPage: React.FC = () => {
     </Container>
   );
 
-  function getRewardLevel(correctCount: number, totalCount: number): String  {
+  function getRewardLevel(correctCount: number, totalCount: number): string  {
     var result = correctCount/totalCount;
     if(result < margins.MEH) {
       return resultLevel.BAD;
@@ -55,7 +55,7 @@ const ResultPage: React.FC = () => {
     }
   }
 
-  function getRewardText(correctCount: number, totalCount: number): String {
+  function getRewardText(correctCount: number, totalCount: number): string {
     var rewardLevel = getRewardLevel(correctCount, totalCount);
     switch(rewardLevel) {
       case resultLevel.BAD:
