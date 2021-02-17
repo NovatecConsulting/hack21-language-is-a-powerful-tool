@@ -35,7 +35,7 @@ const ResultPage: React.FC = () => {
       <Box padding={3} className="reward">{getRewardText(result, maxQuestionCount)}</Box>
       <Box marginTop={4} className="button">
       <RouterLink to="">
-        <Button variant="contained" color="primary" disableElevation >Try again</Button>
+        <Button variant="contained" color="primary" disableElevation >Restart Quiz</Button>
       </RouterLink>
       </Box>
       </Box>
