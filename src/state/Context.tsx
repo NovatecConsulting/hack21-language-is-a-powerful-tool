@@ -12,4 +12,4 @@ export const StateContext = React.createContext<State>({
 });
 export const useReducerState = () => React.useContext(StateContext);
 
-export const maxQuestionCount = 8;
+export const maxQuestionCount = 5;
