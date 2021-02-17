@@ -19,9 +19,9 @@ const LandingPage: React.FC = () => (
         But most of all: Have fun and be nice to people 🧡
       </Box>
 
-      <Box className="startButton">
+      <Box className="button startButton">
         <RouterLink to="/quiz">
-          <Button variant="contained">Start</Button>
+          <Button variant="contained" color="primary" disableElevation>Start</Button>
         </RouterLink>
       </Box>
 

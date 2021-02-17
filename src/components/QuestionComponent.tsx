@@ -44,9 +44,9 @@ const QuestionComponent = ({index, question, showResult, answerCorrect, checkRes
         </Box>
         )}
         {!showResult ?
-          <Button variant="contained" onClick={handleCheckResult}>Check Result</Button>
+          <Box className="button"><Button variant="contained" color="primary" disableElevation onClick={handleCheckResult}>Check Result</Button></Box>
         :
-          <Button variant="contained" onClick={nextQuestion}>Next Question</Button>
+        <Box className="button"><Button variant="contained" color="primary" disableElevation onClick={nextQuestion}>Next Question</Button></Box>
         }
       </Box>
     </Container>
