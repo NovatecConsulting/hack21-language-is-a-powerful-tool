@@ -30,7 +30,7 @@ const ResultPage: React.FC = () => {
    return (
     <Container maxWidth="md">
       <Box boxShadow={2} padding={2} marginTop={4} className="mainBox">
-      <h2>📊 Results</h2>
+      <h1>📊 Results</h1>
       <p>You scored <b>{result} of {maxQuestionCount}</b> ({result/maxQuestionCount*100}%) correct answers</p>
       <Box padding={2} className={getRewardLevel(result, maxQuestionCount)}>{getRewardText(result, maxQuestionCount)}</Box>
       <Box marginTop={4} className="button">
