@@ -78,7 +78,20 @@ div.button a {
 fieldset.answer-section {
   margin-top: 15px;
 }
+
 fieldset.answer-section legend{
   font-weight: bold;
   color: black;
+}
+
+div.same {
+  background-color: #c5ffae;
+  border: 1px solid #628354;
+  border-radius: 4px;
+}
+
+div.different {
+  background-color: #ffaeae;
+  border: 1px solid #835454;
+  border-radius: 4px;
 }

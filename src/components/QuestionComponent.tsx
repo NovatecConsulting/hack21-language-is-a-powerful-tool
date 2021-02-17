@@ -37,8 +37,7 @@ const QuestionComponent = ({index, question, showResult, answerCorrect, checkRes
       </FormControl>
       {showResult && (
       <Box marginBottom={5}>
-        <h4>{answerCorrect ? "🎉 Great, we are on the same page" : "🚨 Sorry, we see have a different interpretation"}</h4>
-        <hr/>
+        <Box padding={2} className={answerCorrect ? "same" : "different"}>{answerCorrect ? "🎉 Great, we are on the same page" : "🚨 Sorry, we see have a different interpretation"}</Box>
         <h4>💡 Explanation</h4>
         <p>{question.explanation}</p>
       </Box>
