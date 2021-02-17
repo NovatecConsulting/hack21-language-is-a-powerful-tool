@@ -25,7 +25,7 @@ const LandingPage: React.FC = () => (
         </RouterLink>
       </Box>
 
-      <Box marginTop={4} className="disclaimer">
+      <Box marginTop={4} padding={2} className="disclaimer">
       <h4>Disclaimer</h4>
       <p>This quiz was created during a Novatec hackathon. The questions, answers and explanations were created based on our best knowledge 
         and thorougly discussed. If you have questions or see something obviously wrong please contact the initiator <i>Stefan Schultz</i> or 
