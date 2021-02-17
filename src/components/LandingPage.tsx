@@ -29,9 +29,8 @@ const LandingPage: React.FC = () => (
       <h4>Disclaimer</h4>
       <p>This quiz was created during a Novatec hackathon. The questions, answers and explanations were created based on our best knowledge 
         and thorougly discussed. If you have questions or see something obviously wrong please contact the initiator <i>Stefan Schultz</i> or 
-        join our internal slack channels <span id="slack">#cop-women</span>, <span id="slack">#cop-diversity</span> or 
-        <span id="slack">#cop-gendering</span> and ask or join the regular <span id="slack">Women@Novatec</span> meeting. If you don't feel comfortabel 
-        with that you can also talk to one of our trust persons:</p>
+        join our internal slack channels <span id="slack">#cop-women</span>, <span id="slack">#cop-diversity</span> or <span id="slack">#cop-gendering</span> and ask, 
+        or join the regular <span id="slack">Women@Novatec</span> meeting. If you don't feel comfortabel with that you can also talk to one of our trust persons:</p>
         <ul>
           <li>Zarin Kabir</li>
           <li>Ruben Burr</li>
