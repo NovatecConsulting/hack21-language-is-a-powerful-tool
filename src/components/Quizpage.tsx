@@ -4,7 +4,8 @@ import QuestionComponent from "./QuestionComponent";
 import { fetchData, useDispatch, useReducerState } from "../state";
 import { setCorrectAnswers } from "../state/Actions";
 import { Redirect, useLocation } from "react-router-dom";
-import { validLanguages, maxQuestionCount, defaultLanguage } from "../state/Context";
+import { defaultLanguage, validLanguages } from "../state/Language";
+import { maxQuestionCount } from "../state/Context";
 
 const QuizPage: React.FC = () => { 
   const dispatch = useDispatch();

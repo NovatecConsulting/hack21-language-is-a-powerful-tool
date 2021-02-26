@@ -1,6 +1,6 @@
-import { Question } from "../types/Question";
+import { Question } from "../../types/Question";
 
-const getQuestionsStraight_DE = (): Question[] => [
+export const getQuestions = (): Question[] => [
   {
     topic : "Würdest du das so sagen?",
     level : "easy",
@@ -58,26 +58,3 @@ const getQuestionsStraight_DE = (): Question[] => [
     explanation : "Die ständige Nutzung des generischen Maskulins zeichnet (wenn auch unterbewusst) ein gewisses Bild in unseren Köpfen. So wird z.B. \"der Arzt\" automatisch als Mann interpretiert, auch wenn damit eine Frau gemeint sein könnte. Um diese Ausgrenzung anderer Geschlechter zu vermeiden, sollte man auf alternative, inkludierende Ausdrucksweisen ausweichen."
   }
 ]
-
-const getQuestions_DE = (): Question[] => shuffleArray(shuffleArray(getQuestionsStraight_DE()));
-
-export function getQuestionsByLang(lang: string): Question[] {
-  switch(lang) {
-    case "de":
-      return getQuestions_DE();
-    default:
-      return getQuestions_DE();
-  }
-}
-
-function shuffleArray(array: Question[]) {
-  let curId = array.length;
-  while (0 !== curId) {
-    let randId = Math.floor(Math.random() * curId);
-    curId -= 1;
-    let tmp = array[curId];
-    array[curId] = array[randId];
-    array[randId] = tmp;
-  }
-  return array;
-}

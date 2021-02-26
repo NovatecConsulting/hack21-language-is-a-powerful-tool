@@ -1,8 +1,9 @@
 import React from "react";
 import { Box, Button, Container } from "@material-ui/core";
 import { Link as RouterLink } from "react-router-dom";
-import { maxQuestionCount } from "../state/Context";
 import logo from "../nt-logo.png"
+import { LANG } from "../state/Language";
+import { maxQuestionCount } from "../state/Context";
 
 const LandingPage: React.FC = () => (
   <Container maxWidth="md">
@@ -20,7 +21,7 @@ const LandingPage: React.FC = () => (
       </Box>
 
       <Box className="button startButton">
-        <RouterLink to="/quiz?lang=de">
+        <RouterLink to={"/quiz?lang=" + LANG.DE}>
           <Button variant="contained" color="primary" disableElevation size="large">Start</Button>
         </RouterLink>
       </Box>

@@ -1,5 +1,5 @@
 import { Dispatch } from "react";
-import { getQuestionsByLang } from "../data/questions";
+import { getQuestionsByLang } from "./QuestionsHandler";
 import { Mutation } from "./Reducer";
 import { Question } from "../types/Question";
 

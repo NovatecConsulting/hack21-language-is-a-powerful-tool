@@ -25,7 +25,7 @@ const QuestionComponent = ({index, question, showResult, answerCorrect, checkRes
   return (
     <Container maxWidth="md">
       <Box boxShadow={2} padding={3} marginTop={4} className="mainBox">
-      <h1>💬 Statement {index + 1} {language}</h1>
+      <h1>💬 Statement {index + 1}</h1>
       <Box className="aussage">
         <p>"{question.question}"</p>
       </Box>

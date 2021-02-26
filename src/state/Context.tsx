@@ -13,5 +13,3 @@ export const StateContext = React.createContext<State>({
 export const useReducerState = () => React.useContext(StateContext);
 
 export const maxQuestionCount = 5;
-export const validLanguages = ["de"];
-export const defaultLanguage = "de";
