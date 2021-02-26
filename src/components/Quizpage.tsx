@@ -3,18 +3,21 @@ import { Container} from "@material-ui/core";
 import QuestionComponent from "./QuestionComponent";
 import { fetchData, useDispatch, useReducerState } from "../state";
 import { setCorrectAnswers } from "../state/Actions";
-import { Redirect } from "react-router-dom";
-import { maxQuestionCount } from "../state/Context";
- 
+import { Redirect, useLocation } from "react-router-dom";
+import { validLanguages, maxQuestionCount, defaultLanguage } from "../state/Context";
+
 const QuizPage: React.FC = () => { 
   const dispatch = useDispatch();
   const { questions, correctAnswers } = useReducerState();
   const [ questionIndex, setQuestionIndex ] = useState(0);
   const [ showResult, setShowResult ] = useState(false);
   const [ answerIsCorrect, setAnswerIsCorrect ] = useState(false);
+  const { search } = useLocation();
+  const match = search.match(/lang=(.*)(&.*)?/);
+  const lang = toValidLanguage(match?.[1]);
 
   React.useEffect(() => {
-    fetchData(dispatch);
+    fetchData(dispatch, lang);
     setCorrectAnswers(dispatch, 0);
     setShowResult(false);
   }, []);
@@ -34,6 +37,10 @@ const QuizPage: React.FC = () => {
     }
   }  
 
+  function toValidLanguage(lang: any) : string {
+    return (lang && validLanguages.some(l => l == lang)) ? lang : defaultLanguage
+  }
+
   return (
     <Container>
       {!!questions && questions.length > 0 && (questionIndex < questions.length ||  questionIndex < maxQuestionCount) && (
@@ -44,6 +51,7 @@ const QuizPage: React.FC = () => {
           showResult={showResult} 
           checkResult={checkResult} 
           nextQuestion={nextQuestion}
+          language={lang}
         />
       )}
       {!!questions && questions.length > 0 && (questionIndex === questions.length || questionIndex === maxQuestionCount) && (

@@ -1,10 +1,10 @@
 import { Dispatch } from "react";
-import { getQuestions } from "../data/questions";
+import { getQuestionsByLang } from "../data/questions";
 import { Mutation } from "./Reducer";
 import { Question } from "../types/Question";
 
-export const fetchData = (dispatch: Dispatch<Mutation>) => {
-  const questions: Question[] = getQuestions();
+export const fetchData = (dispatch: Dispatch<Mutation>, language: string) => {
+  const questions: Question[] = getQuestionsByLang(language);
   dispatch({type: "FETCH_QUESTIONS", data: questions})
 }
 

@@ -1,6 +1,6 @@
 import { Question } from "../types/Question";
 
-export const getQuestionsStraight = (): Question[] => [
+const getQuestionsStraight_DE = (): Question[] => [
   {
     topic : "Würdest du das so sagen?",
     level : "easy",
@@ -59,7 +59,16 @@ export const getQuestionsStraight = (): Question[] => [
   }
 ]
 
-export const getQuestions = (): Question[] => shuffleArray(shuffleArray(getQuestionsStraight()));
+const getQuestions_DE = (): Question[] => shuffleArray(shuffleArray(getQuestionsStraight_DE()));
+
+export function getQuestionsByLang(lang: string): Question[] {
+  switch(lang) {
+    case "de":
+      return getQuestions_DE();
+    default:
+      return getQuestions_DE();
+  }
+}
 
 function shuffleArray(array: Question[]) {
   let curId = array.length;

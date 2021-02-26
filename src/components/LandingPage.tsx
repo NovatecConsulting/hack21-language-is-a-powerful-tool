@@ -20,7 +20,7 @@ const LandingPage: React.FC = () => (
       </Box>
 
       <Box className="button startButton">
-        <RouterLink to="/quiz">
+        <RouterLink to="/quiz?lang=de">
           <Button variant="contained" color="primary" disableElevation size="large">Start</Button>
         </RouterLink>
       </Box>

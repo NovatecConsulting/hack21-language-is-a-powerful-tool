@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Container, Box } from "@material-ui/core";
 import { fetchData, useDispatch, useReducerState } from "../state";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 import { maxQuestionCount } from "../state/Context";
 
 const ResultPage: React.FC = () => {
@@ -23,7 +23,6 @@ const ResultPage: React.FC = () => {
   }
 
   React.useEffect(() => {
-    fetchData(dispatch);
     setResult(correctAnswers);
   }, []);
 
