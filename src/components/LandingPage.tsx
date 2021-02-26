@@ -11,7 +11,7 @@ const LandingPage: React.FC = () => (
       <h1>📣 Language is a powerful tool</h1>
       <Box color="text.primary" marginBottom={4}>
         <h4>Rules</h4>
-        We got <b>{maxQuestionCount} questions</b> for you to find out if
+        We've got <b>{maxQuestionCount} questions</b> for you to find out if
         you know how to talk to the human beings around you. Each question also
         comes with a brief explanation why something might be problematic to
         say, so hopefully you'll learn something new.
@@ -22,7 +22,7 @@ const LandingPage: React.FC = () => (
 
       <Box className="button startButton">
         <RouterLink to={"/quiz?lang=" + LANG.DE}>
-          <Button variant="contained" color="primary" disableElevation size="large">Start</Button>
+          <Button variant="contained" color="primary" disableElevation size="large">🇩🇪 Start</Button>
         </RouterLink>
       </Box>
 
