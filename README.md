@@ -8,12 +8,19 @@ But most important: Have fun and be nice to people 🧡
 
 # 👶 MVP
 - 5-10 questions
-- german language due to different semantics in different languages, more to follow
+- german language due to different semantics in different languages
 - simple yes or no answer
 - explanation why a sentence could be perceived negatively
 - file based persistence
 - no backend
 - first category: would you say it?
+
+# Planned Features
+- language support
+- more categories
+- user name
+- highscore
+- different difficulties for statements
 
 # 💻 Run it
 - check out the code
